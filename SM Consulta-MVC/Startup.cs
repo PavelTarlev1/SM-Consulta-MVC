@@ -30,6 +30,7 @@ namespace SM_Consulta_MVC
                 this._minimumInsuranceIncome = Convert.ToInt32(configuration["MIMUMUM_INSURANCE_INCOME"], CultureInfo.InvariantCulture);
                 this._maximumInsuranceIncome = Convert.ToInt32(configuration["MAXIMUM_INSURANCE_INCOME"], CultureInfo.InvariantCulture);
             }
+
             else
             {
             //Used for testing --- > 
