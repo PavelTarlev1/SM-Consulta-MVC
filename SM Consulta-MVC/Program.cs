@@ -12,6 +12,7 @@ namespace SM_Consulta_MVC
 
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
+            //Env file loading.
             DotNetEnv.Env.Load();
             return Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

@@ -8,7 +8,6 @@ namespace SM_Consulta_MVC.service
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-
         private readonly double _incomeTax;
         private readonly double _healt_social_innsurance_tax;
         private readonly int _maximumInsuranceIncome;

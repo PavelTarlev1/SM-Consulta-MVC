@@ -14,7 +14,6 @@ namespace SM_Consulta_MVC.Models.Entity
         [MinLength(3)]
         [MaxLength(25)]
         [Required]
-  
         public string Name { get; set; }
 
         [Required]

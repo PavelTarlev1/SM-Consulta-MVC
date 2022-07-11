@@ -22,7 +22,7 @@ namespace SM_Consulta_MVC
         {
             Configuration = configuration;
 
-
+            //Reading .env --- > Values storing.
             if (configuration["INCOME_TAX"].ToString() != "")
             {
                 this._healt_social_innsurance_tax = Convert.ToDouble(configuration["HEALT_SOCIAL_INSURANCE_TAX"], CultureInfo.InvariantCulture);
@@ -32,6 +32,7 @@ namespace SM_Consulta_MVC
             }
             else
             {
+            //Used for testing --- > 
                 this._healt_social_innsurance_tax = 0.15;
                 this._incomeTax = 0.10;
                 this._maximumInsuranceIncome = 3000;
@@ -49,7 +50,10 @@ namespace SM_Consulta_MVC
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>(
                 provider => new UserService(provider.GetService<IUserRepository>(),
-                this._incomeTax, this._healt_social_innsurance_tax, this._maximumInsuranceIncome, this._minimumInsuranceIncome));
+                this._incomeTax, 
+                this._healt_social_innsurance_tax, 
+                this._maximumInsuranceIncome, 
+                this._minimumInsuranceIncome));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
