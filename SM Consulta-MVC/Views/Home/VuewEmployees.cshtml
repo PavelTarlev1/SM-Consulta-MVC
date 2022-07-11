@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SM_Consulta_MVC.Models.PullUserDataModel>
+
+@{
+    ViewData["Title"] = "VuewEmployees";
+}
+
+<h1>VuewEmployees</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncomeTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HealthSocialInsurance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalTaxes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NetSaLary)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncomeTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HealthSocialInsurance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalTaxes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NetSaLary)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
