@@ -16,6 +16,7 @@ To develop an Application for calculating net salary.
 * [x] All parameters involved in the calculations can be saved in the database and used repeatedly.
 
 **Guide how to set up the application**
+
 In order to use code-based migration, you need to execute the following commands in the Package Manager Console in Visual Studio: Enable-Migrations: Enables the migration in your project by creating a Configuration class.
 Update-Database: Executes the last migration file created by the Add-Migration command and applies changes to the database schema.
 
