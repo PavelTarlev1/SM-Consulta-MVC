@@ -22,6 +22,10 @@ namespace SM_Consulta_MVC.Data
             return this._repository.UserEntities.ToList();
         }
 
+        /// <summary>
+        /// Adding user to Repository.
+        /// </summary>
+        /// <param name="user"></param>
         public void AddUserToRep(UserEntity user)
         {
             this._repository.Add(user);

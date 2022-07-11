@@ -14,7 +14,6 @@ namespace SM_Consulta_MVC.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IUserService _userService;
 
-        public int UserEntiy { get; private set; }
         public HomeController(ILogger<HomeController> logger, IUserService userService)
         {
             this._logger = logger;
@@ -72,7 +71,6 @@ namespace SM_Consulta_MVC.Controllers
             }
             return View();
         }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

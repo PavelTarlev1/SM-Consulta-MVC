@@ -30,18 +30,30 @@ namespace SM_Consulta_MVC.service
         {
             this._userRepository = userRepository;
         }
-
+        /// <summary>
+        /// Adds single user and send's it to the repository.
+        /// </summary>
+        /// <param name="model"></param>
         public void AddUser(RegisterModel model)
         {
             UserEntity user = Taxsation(model);
             this._userRepository.AddUserToRep(user);
         }
 
+        /// <summary>
+        /// Pulls user from repository.
+        /// </summary>
+        /// <returns></returns>
         public List<UserEntity> PullUsers()
         {
             return this._userRepository.PullAllUsers();
         }
 
+        /// <summary>
+        /// Creating UserEntity .
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public UserEntity Taxsation(RegisterModel model)
         {
             var user = new UserEntity

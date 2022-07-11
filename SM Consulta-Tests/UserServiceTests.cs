@@ -25,7 +25,6 @@ namespace SM_Consulta_Tests
                 _startup._healt_social_innsurance_tax,
                 _startup._maximumInsuranceIncome,
                 _startup._minimumInsuranceIncome);
-
         }
 
         [TestMethod]
